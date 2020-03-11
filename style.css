@@ -23,9 +23,9 @@ body{
     font-size: 1em;
 }
 
-img{
+/* img{
     width: 300px;
-}
+} */
 
 a{
     color: #df00ff;
@@ -105,7 +105,7 @@ header{
     background: #85FFC7;
 }
 
-/* Education */
+/* Education */ 
 
 /* Contact */
 
@@ -113,17 +113,26 @@ footer{
     background: #2B4141;
     color: #c9daea;
 }
-footer li{
+/* footer li{
     padding: 3px;
-}
+} */
 footer a{
-    background-color: #df00ff;
-    color: #2b4141;
+    background-color: #c9daea;
+    /* color: #2b4141; */
     text-decoration: none;
-    padding: 8px;
-    border-radius: 4px;
+    padding: 3px;
+    border-radius: 3px;
     display: inline-block;
 }
 footer a:hover{
     background: rgb(223,0,255,80%);
+}
+
+.credit{
+    font-size: small;
+    font-weight: 200;
+}
+.credit a{
+    background: none;
+    color: #c9daea;
 }
