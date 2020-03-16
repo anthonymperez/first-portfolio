@@ -5,7 +5,7 @@
 #297373 - MYRTLE GREEN
 #2B4141 - JAPANESE INDIGO */
 
-/* Global Styles */
+/********** Global Styles **********/
 
 html{
     box-sizing: border-box;
@@ -36,7 +36,6 @@ a:active{
 
 h1{
     font-family: 'Caveat', cursive;
-    font-size: 6em;
     margin: 0;
     font-weight: 400;
     line-height: 1;
@@ -50,7 +49,8 @@ h2{
 }
 
 .contentWrap{
-    width: 800px;
+    max-width: 800px;
+    width: 85%;
     margin: 0 auto;
     padding: 30px 0;
 }
@@ -73,20 +73,19 @@ h3{
     border: none;
 }
 
-/* Profile */
+/********** Profile **********/
 
 header{
     background: #297373;
     color: #c9daea;
-    text-align: center;
 }
 
-/* Projects */
+/********** Projects **********/
 
 .projects{
     background: #c9daea;
     padding-bottom: 12px;
-    /* display: none; */
+    display: none;
 }
 
 .projects .btn{
@@ -104,41 +103,37 @@ header{
 .projectItem{
     overflow: hidden;
 }
-.projectItem img{
-    float: left;
-    margin-right: 1em;
-}
 .projects h3{
     margin-top: 0;
 }
 
-/* Work */
+/********** Work **********/
 
 .work{
     background: #85FFC7;
 }
 
-.jobItem{
-    display: grid;
-    grid-template-columns: 1fr 2fr;
-    column-gap: 20px;
+/********** Education **********/ 
+
+.education{
+    /* background-image: url(../images/volodymyr-hryshchenko-inI8GnmS190-unsplash.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: top left; */
+    padding-bottom: 102px;
+}
+.education p{
+    width: 60%;
 }
 
-/* Education */ 
-
-/* Contact */
+/********** Contact **********/
 
 footer{
     background: #2B4141;
     color: #c9daea;
-    text-align: center;
 }
-/* footer li{
-    padding: 3px;
-} */
 footer a{
     background-color: #c9daea;
-    /* color: #2b4141; */
     text-decoration: none;
     padding: 9px;
     border-radius: 9px;
@@ -150,19 +145,78 @@ footer a:hover{
 
 .contactList{
     padding: 0;
-    display: flex;
-    justify-content: center;
 }
 .contactList a{
-    margin: 15px;
+    margin: 5px;
     display: inline-block;
 }
 
 .credit{
-    font-size: small;
-    font-weight: 200;
+    font-size: 12px;
+    font-weight: 100;
+    line-height: 0;
+    margin-top: 4em;
 }
 .credit a{
     background: none;
     color: #c9daea;
+    padding: none;
+    margin: none;
+}
+
+/********** Media Queries **********/
+
+@media screen and (min-width: 720px){
+    header, footer{
+        text-align: center;
+    }
+
+    .projectItem img{
+    float: left;
+    margin-right: 1em;
+    }
+
+    .jobItem{
+        display: grid;
+        grid-template-columns: 1fr 2fr;
+        column-gap: 20px;
+    }
+
+    .education{
+        background-image: url(../images/volodymyr-hryshchenko-inI8GnmS190-unsplash.jpg);
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: top right;
+        padding-bottom: 102px;
+    }
+    
+    .contactList{
+        display: flex;
+        justify-content: center;
+    }
+    .contactList a{
+        padding: 15px;
+    }
+    .contactList img{
+        width: 64px;
+        height: 64px;
+    }
+}
+
+@media screen and (max-width: 720px){
+    h1{
+        font-size: 4.69em;
+        line-height: 0.9;
+        margin-bottom: 20px;
+    }
+    h2{
+        line-height: 1;
+    }
+}
+
+@media screen and (min-width: 1280px){
+    .education{
+        background-size: contain;
+        background-repeat: no-repeat;
+    }
 }
