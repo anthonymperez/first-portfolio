@@ -23,10 +23,6 @@ body{
     font-size: 1em;
 }
 
-/* img{
-    width: 300px;
-} */
-
 a{
     color: #df00ff;
 }
@@ -39,7 +35,7 @@ a:active{
 }
 
 h1{
-    font-family: 'Sriracha', cursive;
+    font-family: 'Caveat', cursive;
     font-size: 6em;
     margin: 0;
     font-weight: 400;
@@ -47,7 +43,7 @@ h1{
 }
 h2{
     margin: 0;
-    font-family: 'Sriracha', cursive;
+    font-family: 'Caveat', cursive;
     font-size: 3em;
     margin: 0;
     font-weight: 400;
@@ -59,11 +55,30 @@ h2{
     padding: 30px 0;
 }
 
+h3{
+    margin-bottom: 0;
+}
+.itemDetails h3 + p{
+    font-style: italic;
+}
+.itemDetails h3 ~ p{
+    margin: 0;
+}
+
+.divider > section{
+    border-bottom: 1px dashed #2b4141;
+    padding: 1.5em 0;
+}
+.divider > section:last-of-type{
+    border: none;
+}
+
 /* Profile */
 
 header{
     background: #297373;
     color: #c9daea;
+    text-align: center;
 }
 
 /* Projects */
@@ -71,7 +86,7 @@ header{
 .projects{
     background: #c9daea;
     padding-bottom: 12px;
-    display: none;
+    /* display: none; */
 }
 
 .projects .btn{
@@ -88,8 +103,6 @@ header{
 
 .projectItem{
     overflow: hidden;
-    border-bottom: 1px dashed #2b4141;
-    padding: 1.5em 0;
 }
 .projectItem img{
     float: left;
@@ -105,6 +118,12 @@ header{
     background: #85FFC7;
 }
 
+.jobItem{
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    column-gap: 20px;
+}
+
 /* Education */ 
 
 /* Contact */
@@ -112,6 +131,7 @@ header{
 footer{
     background: #2B4141;
     color: #c9daea;
+    text-align: center;
 }
 /* footer li{
     padding: 3px;
@@ -120,12 +140,22 @@ footer a{
     background-color: #c9daea;
     /* color: #2b4141; */
     text-decoration: none;
-    padding: 3px;
-    border-radius: 3px;
+    padding: 9px;
+    border-radius: 9px;
     display: inline-block;
 }
 footer a:hover{
     background: rgb(223,0,255,80%);
+}
+
+.contactList{
+    padding: 0;
+    display: flex;
+    justify-content: center;
+}
+.contactList a{
+    margin: 15px;
+    display: inline-block;
 }
 
 .credit{
